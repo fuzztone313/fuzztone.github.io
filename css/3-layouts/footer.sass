@@ -1,0 +1,46 @@
+.footer
+    background: #3eaaf5
+    .footer-container
+        width: 100%
+        +display(flex)
+        +justify-content(space-around)
+        flex-wrap: wrap
+        
+    .footer-unit
+        width: 28%
+        margin: 15px
+        @media (max-width: 415px)
+            width: 60%
+        
+            
+        .logo-footer-wrap
+            margin: 0 auto
+            img
+                max-width: 100%
+                width: 100%
+                height: auto
+        .footer-about
+            color: #fff
+            .about-title
+                text-align: center
+                
+            .about-caption
+                text-align: justify
+            
+
+        .contact-footer
+            color: #fff
+            .contact-title
+                text-align: center
+                
+            .footer-location
+                text-align: justify
+                
+            .social-media-footer
+                text-decoration: none
+                a
+                    margin-right: 20px
+                    color: #fff
+                    font-size: 18px
+                    &:hover
+                        color: #b8cefb

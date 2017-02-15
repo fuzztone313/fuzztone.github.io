@@ -1,0 +1,179 @@
+body
+    font-family: $helvetica
+    //background: pink
+    margin: 0
+    padding: 0
+
+header
+    //height: 590px
+    background: #fff
+    padding-bottom: 5px
+
+    .social-media
+        float: left
+        margin: 36px auto 0 20px
+        @media (max-width: 400px)
+            margin: 36px 0 auto 20px
+        @media (max-width: 360px)
+            margin: 0px auto
+            text-align: center
+            padding-top: 20px
+            float: none
+        
+        
+        i
+            color: #0995cc
+            font-size: 20px
+            margin-right: 10px
+            
+            &:hover
+                color: #b8cefb
+
+    .logo
+        text-align: center
+        a
+            display: inline            
+            
+            img
+                margin: 10px auto 0px 0px
+                width: 270px
+                height: 75px 
+                @media (max-width: 360px)
+                    margin: 0px auto
+    .search 
+        position: relative
+        display: inline
+        float: right
+        color: #0995cc
+        font-size: 16px
+        margin: 35px 20px auto auto
+        @media (max-width: 400px)
+            margin: 36px 20px auto 0
+        @media (max-width: 360px)
+            margin: 20px 20px auto 0
+            text-align: center
+            float: none
+            
+    
+        input
+            width: 170px
+            height: 22px
+            background: #fcfcfc
+            border: 2px solid #0995cc
+            border-radius: 5px
+            text-indent: 8px
+        
+        .fa-search
+            position: absolute
+            top: 4px
+            left: 140px
+            cursor: pointer
+            background: transparent
+            border: #fff
+            color: #0995cc
+            @media (max-width: 360px)
+                left: 230px
+            @media (max-width: 320px)
+                left: 210px
+
+.bar
+    border-top: 4px solid #0995cc
+    margin: 30px auto 10px 0px
+
+nav
+    ul
+        overflow: hidden
+        color: #0995cc
+        padding: 0
+        text-align: center
+        margin: 0
+        +transition(max-height 0.4s)
+        
+        a
+            text-decoration: none
+            color: #0995cc
+            text-transform: uppercase
+            font:
+                size: 16px
+                weight: 700
+        
+        li
+            display: inline-block
+            padding: 20px
+            
+            &:hover
+                color: #b8cefb
+
+.mobile-nav
+    width: 100%
+    text-align: left
+    text-decoration: none
+    color: #0995cc
+    text-transform: uppercase
+    font:
+        size: 16px
+        weight: 700
+    box-sizing: border-box
+    padding: 15px 10px
+    cursor: pointer
+    display: none
+.mobile-nav
+    +size(30px)
+    position: relative
+    
+    span
+        top: 60%
+        position: absolute
+        width: 26px
+        height: 3px
+        background: #0995cc
+        +transition(background .3s)
+
+        &:before
+            content: ''
+            top: -7px
+            position: absolute
+            width: 26px
+            height: 3px
+            background: #0995cc
+            +transform-origin(0% 50%)
+            +transition(transform 0.3s)
+            
+        &:after
+            content: ''
+            top: 7px
+            position: absolute
+            width: 26px
+            height: 3px
+            background: #0995cc
+            +transform-origin(0% 50%)
+            +transition(transform 0.3s)
+            
+.mobile-nav.visible    
+    span
+        background-color: #fff
+        
+        &:before
+            +transform(rotate(45deg) translateX(3px) translateY(-6px))
+        &:after
+            +transform(rotate(-45deg) translateX(3px) translateY(5px))
+
+    
+@media (max-width: 700px)
+    .showing
+        max-height: 20em
+    .bar
+        display: none
+    nav
+        ul
+            max-height: 0
+            
+            li
+                box-sizing: border-box
+                width: 100%
+                padding: 15px
+                text-align: left
+    .mobile-nav
+        display: block
+
+
